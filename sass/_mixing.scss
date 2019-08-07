@@ -1,0 +1,95 @@
+//********************************************
+//									Mixings
+//********************************************
+//
+//-Transition
+//-Property prefix
+//-Animation
+//-Keyframes
+//
+//********************************************
+
+
+
+//**********************************
+//	Name: Transition
+//	Description: Build transition with the parameter given
+//	Example:
+//		@include transition(all,2s,ease-out);
+//***********************************/
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+  -webkit-transition: $what $time $how;
+	-moz-transition:    $what $time $how;
+	-ms-transition:     $what $time $how;
+	-o-transition:      $what $time $how;
+	transition:         $what $time $how;
+}
+
+//**********************************
+//	Name: Property prefix
+//	Description: Add the prefix given as parameter to the property 
+//	Example:
+//		@include prefix((
+//			column-count: 3,
+//			column-gap: 1.5em,
+//			column-rule: 2px solid hotpink
+//		), webkit moz);
+//***********************************/
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+  }
+}
+
+//**********************************
+//	Name: Animation for rendering engines
+//	Description: create animation 
+//	Example:
+//		@include animation(
+//      'move-the-object .5s 1',
+//      'move-the-object-again .5s 1.5s'
+//    );        
+//***********************************/
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+//**********************************
+//	Name: Keyframes
+//	Description: Build keyfram for rendering engines
+//	Example:
+//		@include keyframes(move) {
+//      0%   { right: 300px; }
+//      100% { right: 200px; }
+//    }
+//***********************************/
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}

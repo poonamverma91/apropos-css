@@ -1,0 +1,288 @@
+/*-----------------------------------------------------------------------------------
+	typography.scss
+-----------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+	typography.scss
+-----------------------------------------------------------------------------------*/
+html{
+  height: 100%;
+}
+
+dl, dt, dd, ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  font-size: 0px;
+  height: 0px;
+  line-height: 0;
+  width: 100%;
+  overflow:hidden;
+}
+
+::selection {
+  background-color: $apropos-red;
+  color: $apropos-white;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: $apropos-red; /* Firefox */
+  color: $apropos-white;
+  text-shadow: none;
+}
+
+:active,
+:focus { outline: none !important; }
+
+
+/* ----------------------------------------------------------------
+	Typography
+-----------------------------------------------------------------*/
+
+
+body {
+  line-height: $line-height-base;
+  color: $apropos-blue;
+  font-size: $font-size-small;
+  font-family: $roboto-font;
+  font-weight: $font-weight-regular;
+  height: 100%;
+  @media (max-width: 573px) {
+    min-width: 360px;
+    padding: 0;
+  }
+}
+
+a {
+  text-decoration: none !important;
+  color: $apropos-red;
+  &:hover {
+    color: $apropos-blue;
+  }
+  &:not([href]):not([tabindex]) {
+    cursor: pointer;
+  }
+  img {
+    border: none;
+  }
+}
+
+small, .small {
+  font-size: $font-size-extra-small;
+}
+
+:disabled{
+  cursor: not-allowed;
+}
+
+/* ----------------------------------------------------------------
+	Basic Layout Styles
+-----------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $apropos-blue;
+  font-weight: $font-weight-regular;
+  margin: 0;
+  font-family: $montserrat-font;
+}
+
+h1, .h1 { font-size: $font-size-h1; font-weight: $font-weight-bold; }
+h2, .h1 { font-size: $font-size-h2; font-weight: $font-weight-bold; line-height: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; font-weight: $font-weight-bold; line-height: $font-size-h2; }
+
+h4, .h4 {
+  font-size: $font-size-h4;
+  font-weight: $font-weight-light;
+  line-height: $font-size-h3;
+}
+h5, .h5 { font-size: $font-size-h5; line-height: $font-size-h3; }
+h6, .h6 { font-size: $font-size-h6; }
+
+p {
+  margin-bottom: 10px;
+}
+
+.roboto-font {
+  font-family: $roboto-font !important;
+}
+
+.montserrat-font {
+  font-family: $montserrat-font !important;
+}
+.font-sixteen {
+  font-size: $font-size-base !important;
+}
+
+.underline{
+  text-decoration: underline !important;
+}
+
+/* Custom color Classes */
+.apropos-red{
+  color: $apropos-red !important;
+}
+.apropos-blue{
+  color: $apropos-blue !important;
+}
+.apropos-white{
+  color: $apropos-white !important;
+}
+.apropos-light-grey{
+  color: $apropos-light-grey !important;
+}
+.apropos-mid-grey{
+  color: $apropos-mid-grey !important;
+}
+.apropos-dark-grey{
+  color: $apropos-dark-grey !important;
+}
+.apropos-grey{
+  color: $apropos-grey !important;
+}
+.apropos-teal{
+  color: $apropos-teal !important;
+}
+.apropos-yellow{
+  color: $apropos-yellow !important;
+}
+.apropos-sky{
+  color: $apropos-sky !important;
+}
+.apropos-amber{
+  color: $apropos-amber !important;
+}
+.apropos-green{
+  color: $apropos-green !important;
+}
+
+/* Custom Background color Classes */
+.apropos-red-bg{
+  background-color: $apropos-red !important;
+}
+.apropos-blue-bg{
+  background-color: $apropos-blue !important;
+}
+.apropos-white-bg{
+  background-color: $apropos-white !important;
+}
+.apropos-light-grey-bg{
+  background-color: $apropos-light-grey !important;
+}
+.apropos-mid-grey-bg{
+  background-color: $apropos-mid-grey !important;
+}
+.apropos-dark-grey-bg{
+  background-color: $apropos-dark-grey !important;
+}
+.apropos-teal-bg{
+  background-color: $apropos-teal !important;
+}
+.apropos-yellow-bg{
+  background-color: $apropos-yellow !important;
+}
+.apropos-sky-bg{
+  background-color: $apropos-sky !important;
+}
+.apropos-green-bg{
+  background-color: $apropos-green !important;
+}
+.apropos-amber-bg{
+  background-color: $apropos-amber !important;
+}
+
+.box-shadow{
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+}
+/* Common Font Weight */
+.font-weight-light{
+  font-weight: $font-weight-light !important;
+}
+.font-weight-regular{
+  font-weight: $font-weight-regular !important;
+}
+.font-weight-medium{
+  font-weight: $font-weight-medium !important;
+}
+.font-weight-semi-bold{
+  font-weight: $font-weight-semi-bold !important;
+}
+.font-weight-bold{
+  font-weight: $font-weight-bold !important;
+}
+
+/* Custom Border Classes */
+.border-apropos-red{
+  border: 1px solid $apropos-red !important;
+}
+.border-apropos-blue{
+  border: 1px solid $apropos-blue !important;
+}
+.border-apropos-white{
+  border: 1px solid $apropos-white !important;
+}
+.border-apropos-light-grey{
+  border: 1px solid $apropos-light-grey !important;
+}
+.border-apropos-mid-grey{
+  border: 1px solid $apropos-mid-grey !important;
+}
+.border-apropos-teal{
+  border: 1px solid $apropos-teal !important;
+}
+.border-apropos-yellow{
+  border: 1px solid $apropos-yellow !important;
+}
+.border-apropos-sky{
+  border: 1px solid $apropos-sky !important;
+}
+.border-apropos-amber{
+  border: 1px solid $apropos-amber !important;
+}
+.border-apropos-green{
+  border: 1px solid $apropos-green !important;
+}
+
+.pointer-ev-none{
+  pointer-events: none;
+}
+.pointer-ev-auto{
+  pointer-events: auto;
+}
+
+.pointer-not-allowed {
+  cursor: not-allowed !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+#fancy-scroll, .fancy-scroll{
+  &::-webkit-scrollbar-track
+  {
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar
+  {
+    width: 5px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    background-color: $apropos-mid-grey;
+  }
+}

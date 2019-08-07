@@ -1,0 +1,314 @@
+/* ----------------------------------------------------------------
+	Property
+-----------------------------------------------------------------*/
+/* Property Search Result */
+
+.prop-search-result{
+	.prop-search-thumb{
+		height: 120px;
+		img{
+			object-fit: cover;
+			height: 100%;
+			@media (max-width:767px){
+				height: auto;
+			}
+		}
+		@media (max-width:767px){
+			width:100%;
+			height: auto;
+		}
+	}
+	.prop-search-details{
+		.prop-search-address{
+			color: $body-color;
+			font-size: $font-size-h4;
+			font-weight: bold;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.prop-search-date{
+			text-align: right;
+			color: $body-color;
+			@media (max-width:767px){
+				text-align: left;
+			}
+		}
+	}
+}
+
+/* Property Details */
+
+.property-banner{
+	height:450px;
+	img{
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+}
+.property-detail{
+	h4, h5, h6{
+		margin:0;
+	}
+	.prop-head{
+		h5{
+			font-size: $font-size-small;
+		}
+	}
+	.prop-fav{
+		width:40px;
+		height:40px;
+		@include box-shadow(0 0 10px -1px rgba(0,0,0,0.3));
+		text-align: center;
+		border-radius: 50%;
+		color:#cccccc;
+		&:hover{
+			color: $theme-color;
+			@include box-shadow(0 0 10px -1px rgba(213,47,49,0.5));
+		}
+		i{
+			line-height: 40px;
+			font-size:22px;
+		}
+	}
+	.address-detail{
+		h4{
+			font-weight: $font-weight-light;
+		}
+	}
+	.rent-detail{
+		float: right;
+		@media (max-width: 767px){
+			float: none;
+		}
+	}
+	.prop-info{
+		.border-left{
+			@media (max-width: 767px){
+				border:none !important;
+			}
+		}
+	}
+}
+.property-footer{
+	@include box-shadow(0 0 5px -1px rgba(0,0,0,0.3));
+	background-color: #ffffff;
+	padding: 20px 0;
+}
+
+.masonry { /* Masonry container */
+	column-count: 1;
+	column-gap: 1em;
+
+	@include mobile {
+		column-count: 1;
+	}
+
+	.item { /* Masonry bricks or child elements */
+		border: 1px solid $apropos-light-grey;
+		display: inline-block;
+		margin: 0 0 2em;
+		width: 100%;
+		position: relative;
+		
+		.count-gadget {
+			p {
+				line-height: 20px;
+			}
+		}
+
+		.btn-toggle {
+			border-radius: 0;
+			position: absolute;
+			margin-top: -48px;
+			left: -1px;
+			font-weight: $font-weight-semi-bold;
+			padding: 5px 30px;
+
+			&:hover, &.collapsed {
+				background-color: $apropos-blue;
+				color: $apropos-white;
+			}
+
+			&:focus {
+				background-color: $apropos-blue;
+				color: $apropos-white;
+			}
+
+			&.collapsed {
+				background-color: $apropos-white;
+				color: $apropos-blue;
+
+				&:focus {
+					background-color: $apropos-white;
+					color: $apropos-blue;
+				}
+
+				&:before {
+					content: "+";
+					color: $apropos-blue;
+				}
+			}
+
+			&:before {
+				content: "-";
+				color: $apropos-white;
+				position: absolute;
+				left: 10px;
+				font-size: 22px;
+			}
+
+		}
+
+		.border-blue {
+			border: 1px solid $apropos-blue;
+		}
+
+		.green-bg {
+			background-color: #c0ecae;
+		}
+
+		.lightblue-bg {
+			background-color: #aadaff;
+		}
+
+		.orange-bg {
+			background-color: #f89d67;
+		}
+
+		.propFeatures {
+			font-family: $montserrat-font;
+			font-weight: $font-weight-semi-bold;
+
+			.col-4 {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+/********* Material Expansion Panel ***************/
+.custom-panel {
+	overflow: visible;
+	border-radius: 0 !important;
+
+	.mat-expansion-panel-header {
+		background-color: $apropos-light-grey;
+		border-radius: 0;
+		left: -1px;
+		font-weight: $font-weight-medium;
+		padding: 10px 15px;
+		border: 1px solid $apropos-light-grey;
+		font-family: $roboto-font;
+
+		.mat-expansion-panel-header-title {
+			color: $apropos-blue;
+			margin: 0;
+		}
+
+		&:hover, &:focus {
+			background-color: $apropos-light-grey !important;
+
+			.mat-expansion-panel-header-title, &:before {
+				color: $apropos-blue;
+			}
+		}
+
+		&.mat-expanded {
+			background-color: $apropos-light-grey;
+
+			.mat-expansion-panel-header-title {
+				color: $apropos-blue;
+			}
+
+			&:after {
+				content: "\E00D";
+				font-family: apropos;
+				color: $apropos-blue;
+			}
+		}
+
+		&:after {
+			content: "\E014";
+			font-family: apropos;
+			color: $apropos-blue;
+			position: absolute;
+			right: 10px;
+			font-size: 18px;
+		}
+
+		.mat-expansion-indicator {
+			display: none !important;
+
+			&:after {
+				display: none !important;
+			}
+		}
+		&.apropos-red-bg {
+			&:hover, &:focus {
+				background-color: $apropos-red !important;
+			}
+			&:after {
+				color: $apropos-white;
+			}
+		}
+		&.apropos-amber-bg {
+			&:hover, &:focus {
+				background-color: $apropos-amber !important;
+			}
+			&:after {
+				color: $apropos-white;
+			}
+		}
+	}
+
+	.mat-expansion-panel-content {
+		overflow: hidden !important;
+
+		.mat-expansion-panel-body {
+			padding: 15px !important;
+			font-size: 14px;
+			line-height: 1.5;
+			.table{
+				thead{
+					th {
+						vertical-align: middle;
+						font-family: $roboto-font;
+						font-weight: $font-weight-medium;
+						border-top: none;
+						font-size: 14px;
+						padding: 5px 10px;
+						&:first-child{
+							padding-left: 0;
+						}
+						&:last-child{
+							padding-right: 0;
+						}
+					}
+				}
+				tbody{
+					tr{
+						font-weight: $font-weight-light;
+						font-size: 14px;
+						td{
+							padding: 8px 10px;
+							i{
+								font-size: 20px;
+							}
+							&:first-child{
+								padding-left: 0;
+							}
+							&:last-child{
+								padding-right: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+	box-shadow: none;
+}
+

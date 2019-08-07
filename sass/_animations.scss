@@ -1,0 +1,37 @@
+//********************************************
+//							  Animations
+//********************************************
+//
+//-BounceIn
+//
+//********************************************
+
+//********************************************
+//							BounceIn
+//********************************************
+%bounce-in	{
+  @include animation('bounceIn .7s linear forwards');
+}
+
+@include keyframes(bounceIn) {
+
+  0% {
+    opacity: 0;
+    transform: scale(.3) translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: .9;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(.89);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}

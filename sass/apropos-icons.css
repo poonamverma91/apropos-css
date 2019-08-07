@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "apropos";
+  src:url("../fonts/apropos-icon/apropos.eot");
+  src:url("../fonts/apropos-icon/apropos.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/apropos-icon/apropos.woff") format("woff"),
+    url("../fonts/apropos-icon/apropos.ttf") format("truetype"),
+    url("../fonts/apropos-icon/apropos.svg#apropos") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+
+}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "apropos" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-icon]:before {
+  font-family: "apropos" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "apropos" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-prop-image:before {
+  content: "\e000";
+}
+.icon-arrow-right:before {
+  content: "\e001";
+}
+.icon-arrow-left:before {
+  content: "\e002";
+}
+.icon-error-triangle:before {
+  content: "\e003";
+}
+.icon-dashboard:before {
+  content: "\e004";
+}
+.icon-angle-left:before {
+  content: "\e005";
+}
+.icon-password:before {
+  content: "\e006";
+}
+.icon-angle-right:before {
+  content: "\e007";
+}
+.icon-close:before {
+  content: "\e008";
+}
+.icon-angle-down:before {
+  content: "\e009";
+}
+.icon-heart-alt:before {
+  content: "\e00a";
+}
+.icon-heart:before {
+  content: "\e00b";
+}
+.icon-info:before {
+  content: "\e00c";
+}
+.icon-minus:before {
+  content: "\e00d";
+}
+.icon-profile:before {
+  content: "\e00e";
+}
+.icon-preference:before {
+  content: "\e00f";
+}
+.icon-properties:before {
+  content: "\e010";
+}
+.icon-search:before {
+  content: "\e011";
+}
+.icon-logout:before {
+  content: "\e012";
+}
+.icon-email:before {
+  content: "\e013";
+}
+.icon-plus:before {
+  content: "\e014";
+}
+.icon-setting:before {
+  content: "\e015";
+}
+.icon-prop-placeholder:before {
+  content: "\e016";
+}
+.icon-error-triangle-alt:before {
+  content: "\e017";
+}
+.icon-application:before {
+  content: "\e018";
+}
+.icon-folder-upload:before {
+  content: "\e019";
+}
+.icon-map-pointer:before {
+  content: "\e01a";
+}
+.icon-apropos-symbol:before {
+  content: "\e01b";
+}
+.icon-check-circle:before {
+  content: "\e01c";
+}
+.icon-calendar:before {
+  content: "\e01d";
+}
+.icon-loader:before {
+  content: "\e01e";
+}
+.icon-feature-1:before {
+  content: "\e01f";
+}
+.icon-feature-2:before {
+  content: "\e020";
+}
+.icon-feature-3:before {
+  content: "\e021";
+}
+.icon-feature-4:before {
+  content: "\e022";
+}
+.icon-feature-5:before {
+  content: "\e023";
+}
+.icon-clock:before {
+  content: "\e024";
+}
+.icon-notification:before {
+  content: "\e025";
+}
+.icon-database:before {
+  content: "\e026";
+}
+.icon-filter:before {
+  content: "\e027";
+}
+.icon-notification-alt:before {
+  content: "\e028";
+}
+.icon-random:before {
+  content: "\e029";
+}
+.icon-search-alt:before {
+  content: "\e02a";
+}
+.icon-icomoon-16:before {
+  content: "\e02b";
+}
+.icon-ticket:before {
+  content: "\e02c";
+}
+.icon-calendar-alt-1:before {
+  content: "\e02d";
+}
+.icon-notification-1:before {
+  content: "\e02e";
+}
+.icon-error-cirlcle:before {
+  content: "\e02f";
+}
+.icon-linkedin:before {
+  content: "\e030";
+}
+.icon-angle-left-1:before {
+  content: "\e031";
+}
+.icon-instagram:before {
+  content: "\e032";
+}
+.icon-facebook:before {
+  content: "\e033";
+}
+.icon-mouse:before {
+  content: "\e034";
+}
+.icon-check-circle-alt:before {
+  content: "\e035";
+}
+.icon-folder:before {
+  content: "\e036";
+}
+.icon-exclamation:before {
+  content: "\e037";
+}
+.icon-close-circle-alt:before {
+  content: "\e038";
+}
+.icon-check:before {
+  content: "\e039";
+}
+.icon-bar:before {
+  content: "\e03a";
+}
+.icon-play:before {
+  content: "\e03b";
+}
+.icon-map:before {
+  content: "\e03c";
+}
+.icon-angle-right-1:before {
+  content: "\e03d";
+}
+.icon-twitter:before {
+  content: "\e03e";
+}

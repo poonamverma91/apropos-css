@@ -1,0 +1,123 @@
+.property-gallery{
+  height: 450px;
+  .lSSlideWrapper{
+    position: relative;
+    height: -webkit-fill-available;
+    .lightSlider{
+      max-height: -webkit-fill-available;
+      transform: translate(0px, 0px);
+      transition-property: transform,height;
+      transition-duration: inherit !important;
+      transition-timing-function: inherit !important;
+      &.lsGrab > *{
+        cursor: grab;
+      }
+      &.lsGrabbing > *{
+        cursor: move;
+      }
+      & > *{
+        float: left;
+      }
+      .img-holder{
+        height: 450px;
+        img{
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .thumbsContainer {
+    width: 550px;
+    height: 120px;
+    overflow: hidden;
+    position: absolute;
+    .lSGallery{
+      display: flex;
+      li{
+        width: 100px !important;
+        height: 100px !important;
+        margin-right: 10px !important;
+        float: left;
+        list-style: none;
+        cursor: pointer;
+        -webkit-transition: all .88s ease;
+        transition: all .88s ease;
+        display: inline-block;
+        position: relative;
+        &:hover{
+          opacity: 0.5;
+        }
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -15px;
+          left: 25%;
+          height: 4px;
+          border-radius: 2px;
+          width: 50%;
+          background-color: $apropos-blue;
+          transform-origin: right top;
+          transform: scale(0, 1);
+          transition: color 0.1s, transform 0.2s ease-out;
+        }
+        &:hover::after, &:focus::after, &.active:after {
+          transform-origin: left top;
+          transform: scale(1);
+        }
+      }
+    }
+
+  }
+  .img-count{
+    position: absolute;
+    margin-left: 570px;
+    margin-top: 45px;
+    cursor: pointer;
+  }
+  .btn{
+    position: relative;
+    bottom: 80px;
+    left: 30px;
+    @include box-shadow(0 2px 2px -1px rgba(0,0,0,0.1));
+    &:hover{
+      background-color: rgba(255,255,255,1);
+      color: $apropos-blue;
+    }
+  }
+  .modal-image {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    .modal-image-content {
+      position: relative;
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1200px;
+      top: 5%;
+      .modal-status{
+        color: $apropos-white;
+        padding: 5px 0;
+        .close{
+          color: $apropos-white;
+          font-size: 18px;
+        }
+        .image-count{
+          font-size: 24px;
+        }
+      }
+      .light-box-slides{
+        height: 800px;
+      }
+    }
+  }
+}

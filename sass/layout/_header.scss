@@ -1,0 +1,219 @@
+/* ----------------------------------------------------------------
+	Header
+-----------------------------------------------------------------*/
+header, .sub-header{
+	@include box-shadow(0 0 8px -1px rgba(0,0,0,0.3));
+	.navbar-light{
+		padding:0;
+		.navbar-brand{
+			padding:0;
+		}
+		.nav-link{
+			letter-spacing: $letter-spacing-base;
+			font-family: $primary-menu-font;
+			font-size: $primary-menu-font-size;
+			text-transform: $primary-menu-font-tt;
+			color: $primary-menu-font-color;
+			padding: 0 20px;
+			&:hover{
+				color:$theme-color;
+			}
+			@media(max-width:767px){
+				padding: 8px 20px;
+			}
+			.profile-pic{
+				width: 40px;
+				height:40px;
+				margin-right: 5px;
+			}
+		}	
+		.login-link{
+			line-height: $line-height-base;
+			a{
+				color: $primary-menu-font-color;
+			}
+			.register-link{
+				text-transform: none;
+			}
+			&:hover{
+				color:$primary-menu-font-color;
+			}
+		}	
+		.dropdown-toggle{
+			&::after{
+				vertical-align: .150em;
+				border-top: .4em solid #A9A9A9;
+				border-right: .4em solid transparent;
+				border-bottom: 0;
+				border-left: .4em solid transparent;
+			}
+		}
+		.dropdown-menu{
+			.dropdown-item{
+				line-height: normal;
+			}
+		}
+		.navbar-toggler{
+			background-color: $theme-color;
+			.navbar-toggler-icon{
+				
+			}
+		}
+	}
+}
+
+.sub-header{
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+	background-color: #eff2f2;
+	.navbar-light{
+		padding: 10px 0;
+		.nav-item{
+			border-right:1px solid #cccccc;
+			&:last-child{
+				border:none;
+			}
+		}
+		.nav-item:first-child .nav-link{
+			padding-left:0;
+		}
+	}
+}
+
+/* Free Valuation Popup */
+.bedroom-selector{
+	.bedrooms-nav{
+		.circle {
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			text-align: center;
+			display: inline-block;
+			border: 1px solid #d1d4d5;
+			margin-right: 5px;
+			color: #d1d4d5;
+			&:hover {
+				color: $body-color;
+				border: 1px solid $body-color;
+			}
+		}
+		i {
+			font-size: 22px;
+			line-height: 35px;
+		}
+	}
+	.bedrooms{
+		i{
+			font-size: 25px;
+			margin-right: 10px;
+		}
+	}
+}
+
+/* Confirm boking Popup */
+.calendar{
+	width:85%;
+	.calendar-head{
+		background-color: #e12021;
+		color:#fff;
+		border-radius: 5px 5px 0 0;
+		font-weight: bold;
+		padding: 5px 0;
+		&:before{
+			width: 8px;
+			height: 22px;
+			position: absolute;
+			background-color: #cccccc;
+			content: "";
+			top: -11px;
+			left: 32px;
+			border-radius: 20px;
+		}
+		&:after{
+			width: 8px;
+			height: 22px;
+			position: absolute;
+			background-color: #cccccc;
+			content: "";
+			top: -11px;
+			right: 54px;
+			border-radius: 20px;
+		}
+	}
+	.calendar-body{
+		background-color: #e7e7e7;
+		border-radius:0 0 5px 5px;
+		padding:5px 10px;
+		font-weight:bold;
+	}
+}
+.clock{
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+	line-height: 70px;
+	i{
+		font-size: 70px;
+	}
+}
+.date-carousel{
+	.card{
+		padding: 0 20px;
+		background-color: transparent;
+		.card-body{
+			padding:10px 20px;
+			.card-day, .card-date, .card-month{
+				line-height: normal;
+				text-align: center;
+			}
+		}
+	}
+	.flipster__item--current{
+		background-color:#494949;
+		.card-day, .card-date, .card-month{
+			color:#ffffff;
+		}
+	}	
+	.flipster__item--past-1, .flipster__item--future-1  {
+		.card-day, .card-month{
+			opacity:0;
+		}
+	}
+}
+
+#time-carousel{
+	width:100%;
+	.time-slot{
+		border-top:1px solid #cccccc;
+		text-align: center;
+		font-size: $font-size-h4;
+		padding:5px 0;
+		cursor: pointer;
+		&:hover{
+			background-color: #494949;
+			color: $white-color;
+			border-color: #494949;
+		}
+		&:last-child{
+			border-bottom:1px solid #cccccc;
+		}
+	}
+	.carousel-control-prev, .carousel-control-next{
+		background-color: #ebe8e8;
+		font-size:26px;
+		color: $dark-color;
+		i{
+			line-height: 20px;
+		}
+	}
+	.left{
+		top:-19px;
+	}
+	.right{
+		bottom:-19px;
+	}
+}

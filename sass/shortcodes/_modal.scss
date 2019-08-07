@@ -1,0 +1,13 @@
+/* ----------------------------------------------------------------
+	Modal Popup
+-----------------------------------------------------------------*/
+.modal-dialog{
+	max-width: 350px;
+	margin-top:64px;
+	.modal-header{
+		border-top:15px solid $theme-color;
+		text-align: center;
+		display: block;
+	}
+}
+

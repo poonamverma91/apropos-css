@@ -1,0 +1,32 @@
+/*-----------------------------------------------------------------------------------
+
+    Theme Name: DJ Alexander
+    Theme URI: http://www.djalexander.co.uk
+    Description: Real Estate
+    Author: DJ Alexander
+    Author URI: http://www.djalexander.co.uk
+
+    Sass Stylesheet
+
+-----------------------------------------------------------------------------------*/
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../../../node_modules/font-awesome/css/font-awesome.min.css";
+
+// Fonts
+@import 'apropos-fonts.css';
+
+// Initialize
+@import "./core/_mixins.scss";
+@import "./core/_variables.scss";
+
+// Layout
+@import "./layout/_typography.scss";
+@import "./public-website/header.scss";
+@import "./public-website/main.scss";
+@import "./public-website/magnific-popup.css";
+@import "./public-website/slider.scss";
+
+//Shortcodes
+@import "./shortcodes/_buttons.scss";
+@import "./shortcodes/_forms.scss";
+@import "./shortcodes/_new-forms.scss";

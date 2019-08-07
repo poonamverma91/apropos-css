@@ -1,0 +1,63 @@
+//********************************************
+//							Global Variables
+//********************************************
+//
+//-Font Style Variables
+//-Colors
+//
+//********************************************
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import "/core/variables";
+//********************************************
+//					Font Style Variables
+//********************************************
+$main_font: 'Lato';
+$sub_font: 'Avenir';
+$typo: sans-serif;
+
+//********************************************
+//										Colors
+//********************************************
+$color-placeholder: rgba(148, 148, 148, 1);
+$color-line: rgba(0, 0, 0, .1);
+
+$color-light-gray: #666;
+$color-dark-gray: #333;
+
+$color-light-red: rgba(217, 83, 79, 1);
+$color-dark-red: rgba(201, 48, 44, 1);
+
+$color-light-green: rgba(0, 200, 81, 1);
+$color-dark-green: rgba(0, 126, 51, 1);
+
+$color-light-yellow: rgba(255, 187, 51, 1);
+$color-dark-yellow: rgba(255, 136, 0, 1);
+
+$color-light-blue: rgba(25, 158, 216, 1);
+$color-medium-blue: rgba(4, 100, 141, 1);
+$color-dark-blue: rgba(4, 100, 141, 1);
+
+$white: #fff;
+$color_persian_red_approx: #E11F21;
+$error_red: rgba(213, 47, 51, 1);
+$color_gravel_approx: #4a4a4a;
+$color_rangoon_green_approx: #1c1c1c;
+$color_bright_gray_approx: #40434e;
+$color_san_marino_approx: #4267b2;
+$color_mountain_mist_approx: #979797;
+$color_chicago_approx: #5c5c5c;
+$color_deep_cerulean_approx: #0077b5;
+$black: #000000;
+$color_profile_backround : #3B8288;
+$color_celeste_approx: #cccccc;
+$color_sunglo_approx: #e9696c;
+$color_hit_gray_approx: #a4b3b7;
+$color_gray_approx: #9B9B9B;
+$color_backround_gray: #F2F2F2;
+$bg-grey: rgba(245, 248, 249, 1);
+
+/* 19122017- Madhuri */
+$my_list_red_color: #E11F21;
+/* end */
+$linear_gradient : linear-gradient(180deg, #F5515F 0%, #9F041B 100%);

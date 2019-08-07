@@ -1,0 +1,454 @@
+/* ----------------------------------------------------------------
+    Forms
+-----------------------------------------------------------------*/
+.form-control {
+  border-radius: 4px;
+  border: 1px solid $apropos-mid-grey;
+  color: $apropos-blue;
+  background: transparent;
+  padding: 5px 10px;
+  font-weight: $font-weight-light;
+  height: 40px;
+  &:focus {
+    box-shadow: none;
+    border-color: $apropos-blue;
+  }
+  &::placeholder {
+    color: $apropos-mid-grey;
+  }
+  &[readonly] {
+    background-color: $apropos-white;
+  }
+}
+
+label{
+  margin: 0;
+}
+
+.select-dropdown, .select{
+  position: relative;
+  &:before, &:after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    pointer-events: none;
+  }
+  &:before {
+    content: "";
+    text-align: center;
+    border-left:1px solid $apropos-mid-grey;
+    margin: 8px 1px;
+    z-index: 9;
+  }
+  &:after {
+    content: "\E009";
+    font-family: apropos;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: $apropos-mid-grey;
+    background-color: $apropos-white;
+    border-radius: 0 2px 2px 0;
+    margin: 1px;
+  }
+  select {
+    padding-right: 38px;
+    cursor: pointer;
+    option{
+      padding:20px;
+    }
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
+
+.select-wrapper {
+  cursor: pointer;
+  padding-right: 35px;
+  input {
+    border-radius: 3px;
+    border: 1px solid $apropos-mid-grey;
+    color: $apropos-blue;
+    background: transparent;
+    border-right: 1px solid $apropos-mid-grey !important;
+    height: 100%;
+    width: 100% !important;
+    cursor: pointer;
+    font-weight: $font-weight-light;
+    text-transform: unset !important;
+    &:focus {
+      box-shadow: none;
+      border-color: $apropos-mid-grey;
+    }
+    &::placeholder {
+      color: $apropos-mid-grey;
+    }
+  }
+  .dropdown-select {
+    border-radius: 4px;
+    border: 1px solid $apropos-mid-grey;
+    max-height: 500px;
+    background-color: $apropos-white;
+    margin-top: 5px;
+    @include box-shadow(0 3px 15px 0 rgba(0, 0, 0, 0.3));
+    .option {
+      padding: 10px;
+      border-bottom: 1px solid $apropos-mid-grey;
+      text-decoration: none;
+      color: $apropos-grey;
+      cursor: pointer;
+      &:hover {
+        background-color: $apropos-blue;
+        color: $apropos-white;
+      }
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+  .caret {
+    right: 8px !important;
+    z-index: 0 !important;
+    &::after {
+      content: '\e009';
+      font-family: 'apropos';
+      color: $apropos-mid-grey;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+
+.select-dropdown-transparent {
+  position: relative;
+
+  &:before, &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  &:before {
+    content: "";
+    background: transparent;
+    text-align: center;
+  }
+
+  &:after {
+    content: "\25BC";
+    vertical-align: middle;
+    text-align: center;
+    line-height: 36px;
+    font-size: 14px;
+    color: $apropos-blue;
+  }
+
+  select {
+    padding-right: 15px;
+    cursor: pointer;
+    border: none;
+    padding-left: 3px;
+
+    &.right{
+      text-align-last: right;
+      text-align: right;
+      -ms-text-align-last: right;
+      -moz-text-align-last: right;
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
+
+.mat-select{
+  display: flex !important;
+  align-items: center;
+  .mat-select-trigger{
+    width: 100%;
+    .mat-select-placeholder{
+      color: $apropos-mid-grey;
+    }
+  }
+  .mat-select-arrow-wrapper{
+    border-left: 1px solid $apropos-mid-grey;
+    .mat-select-arrow{
+      margin: 0 0 0 10px;
+      border: none;
+      width: auto;
+      display: flex;
+      align-items: center;
+      &:before{
+        content: '\e009';
+        font-family: 'apropos';
+        color: $apropos-mid-grey;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+  }
+}
+.cdk-overlay-pane{
+  padding: 0 5px;
+  .mat-select-panel {
+    margin-top: 32px;
+    &::-webkit-scrollbar-track {
+      border-radius: 5px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: $apropos-mid-grey;
+    }
+
+    .mat-option {
+      &:hover, &.mat-active {
+        background-color: $apropos-blue;
+        color: $apropos-white;
+      }
+    }
+  }
+}
+
+
+.input-group{
+  border: 1px solid $apropos-mid-grey;
+  border-radius: 2px;
+  .input-group-prepend, .input-group-append, .input-group-addon {
+    display: flex;
+    min-width: 40px;
+    border: none;
+    align-items: center;
+    margin: 0;
+
+    .input-group-text {
+      background-color: transparent;
+      width: 100%;
+      margin: 5px auto;
+      border: none;
+      border-right: 1px solid $apropos-mid-grey;
+      padding: 0 7px;
+      color: $apropos-mid-grey;
+      font-weight: $font-weight-medium;
+      justify-content: center;
+    }
+  }
+  .input-group-append{
+    .input-group-text {
+      border-left: 1px solid $apropos-mid-grey;
+      border-right: none;
+    }
+  }
+  .form-control{
+    border: none;
+    &:not(:first-child){
+      border-left: none;
+    }
+  }
+}
+
+.country-dropdown{
+  .dropdown{
+    .dropbtn{
+      box-shadow: none;
+      padding: 3px 10px;
+      border-right: 1px solid $apropos-mid-grey;
+      border-radius: 0;
+      color: $apropos-blue;
+      font-weight: $font-weight-light;
+      &:after{
+        content: '\E009';
+        font-family: apropos;
+        color: $apropos-mid-grey;
+        padding-left: 5px;
+        font-size: 10px;
+        padding-top: 5px;
+      }
+    }
+    .dropdown-content{
+      margin-top: 10px;
+      .list-group-item{
+        &:hover{
+          background-color: $apropos-light-grey;
+        }
+      }
+    }
+  }
+}
+
+.common-radio-blue {
+  input[type=radio] {
+    opacity: 0;
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    &:checked + label:after {
+      background-color: $apropos-white;
+    }
+    &:checked + label:before {
+      background-color: #211d3e;
+      content: '';
+      position: absolute;
+      right: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    + label {
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      position: relative;
+      &:after {
+        content: '';
+        background: $apropos-white;
+        border: 2px solid $apropos-blue;
+        display: inline-block;
+        vertical-align: middle;
+        width: 22px;
+        height: 22px;
+        padding: 2px;
+        line-height:16px;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.common-left-radio-blue {
+  input[type=radio] {
+    opacity: 0;
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    &:checked + label:before {
+      background-color: $apropos-white;
+    }
+    &:checked + label:after {
+      background-color: #211d3e;
+      content: '';
+      position: absolute;
+      left: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    + label {
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      position: relative;
+      &:before {
+        content: '';
+        background: $apropos-white;
+        border: 2px solid $apropos-blue;
+        display: inline-block;
+        vertical-align: middle;
+        width: 22px;
+        height: 22px;
+        padding: 2px;
+        line-height:16px;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.blue-checkbox{
+  input[type=checkbox] {
+    opacity: 0;
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    &:checked + label:before {
+      background-color: $apropos-blue;
+      color: $apropos-white;
+      border-color: $apropos-blue;
+      font-size: 12px;
+      line-height: 14px;
+      font-family: 'apropos';
+      content: '\E039';
+    }
+    + label {
+      display: inline-flex;
+      align-items: start;
+      cursor: pointer;
+      position: relative;
+      &:before {
+        content: '';
+        background: $apropos-white;
+        border: 2px solid $apropos-mid-grey;
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        border-radius: 2px;
+        margin-top: 3px;
+      }
+    }
+  }
+}
+
+.right-blue-checkbox {
+  input[type=checkbox] {
+    opacity: 0;
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    &:checked + label:after {
+      background-color: $apropos-blue;
+      color: $apropos-white;
+      border-color: $apropos-blue;
+      font-size: 12px;
+      line-height: 14px;
+      font-family: 'apropos';
+      content: '\E039';
+    }
+    &:checked + label:before {
+      display: none;
+    }
+    + label {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      &:after {
+        content: '';
+        background: $apropos-white;
+        border: 2px solid $apropos-mid-grey;
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+        line-height:18px;
+        text-align: center;
+        border-radius: 2px;
+        margin-left: 15px;
+      }
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

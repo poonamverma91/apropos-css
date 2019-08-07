@@ -1,0 +1,184 @@
+//-------------------- Base Colors --------------------//
+
+$theme-color:                   #f8485e;
+$secondary-color:               #211d3e;
+$body-color:                    #333333;
+$heading-color:                 #000000;
+$white-color:                   #ffffff;
+$transparent-color:             transparent;
+$light-color:                   #f0efef;
+$dark-color:                    #cacac8;
+$dark-gray:                     #a5a5a5;
+$link-color:                    #4860d7;
+$orange-color:                  #e0900c;
+$green-color:                   #417406;
+
+$success: 						          #3C763D;
+$info:    						          #31708F;
+$warning: 						          #8A6D3B;
+$danger:  						          #A94442;
+
+//-------------------- New Colors --------------------//
+$apropos-red:                     #d22630;
+$apropos-blue:                    #211d3e;
+$apropos-white:                   #ffffff;
+$apropos-light-grey:              #f0efef;
+$apropos-mid-grey:                #cacac8;
+$apropos-grey:                    #7d7d7d;
+$apropos-dark-grey:               #4A4A4A;
+$apropos-teal:                    #82f4e2;
+$apropos-yellow:                  #f4e266;
+$apropos-sky:                     #4960ef;
+$apropos-light-blue:              #4C91E2;
+$apropos-amber:                   #FFC200;
+$apropos-green:                   #6BB916;
+
+
+//-------------------- Line Height Variables --------------------//
+
+$line-height-base:              1.5;
+$line-height-content:           1.8;
+$letter-spacing-base:           0.86px;
+
+
+//-------------------- Margins --------------------//
+
+$margin-base:                   50px;
+$margin-small:                  30px;
+$margin-big:                    80px;
+
+
+
+//-------------------- Font Families --------------------//
+
+$body-font:                     'Lato', sans-serif;
+$heading-font:                  'Montserrat', sans-serif;
+$secondary-font:                'Crete Round', serif;
+$roboto-font:                   'Roboto', sans-serif;
+$montserrat-font:               'Montserrat', sans-serif;
+
+
+//-------------------- Font Sizes --------------------//
+
+$font-size-extra-small:         12px;
+$font-size-small:               14px;
+$font-size-base:                16px;
+$font-size-h1:                  36px;
+$font-size-h2:                  26px;
+$font-size-h3:                  22px;
+$font-size-h4:                  18px;
+$font-size-h5:                  $font-size-base;
+$font-size-h6:                  $font-size-small;
+
+
+$font-weight-light:             300 !default;
+$font-weight-regular:           400 !default;
+$font-weight-medium:            500 !default;
+$font-weight-semi-bold:         600 !default;
+$font-weight-bold:              700 !default;
+
+
+//-------------------- Header --------------------//
+
+                   
+$primary-menu-font:             		$body-font;
+$primary-menu-font-weight:      		bold;
+$primary-menu-font-size:        		13px;
+$primary-menu-font-tt:          		uppercase;
+$primary-menu-font-color:       		#4F5658;
+
+
+// Primary Menu Sub Menu
+$primary-menu-submenu-width:            220px;
+$primary-menu-submenu-font:             $body-font;
+$primary-menu-submenu-font-size:        12px;
+$primary-menu-submenu-font-weight:      700;
+
+
+//-------------------- Buttons --------------------//
+$btn-border-radius:                     20px;
+$btn-padding:                           20px;
+
+//-------------------- Responsive Breakpoints --------------------//
+
+$tablet-width:                        768px;
+$desktop-width:                       1024px;
+
+
+//-------------------- Social Icons Colors --------------------//
+
+$facebook:                 #3B5998;
+$delicious:                #205CC0;
+$paypal:                   #00588B;
+$flattr:                   #F67C1A;
+$android:                  #A4C639;
+$smashmag:                 #E53B2C;
+$gplus:                    #DD4B39;
+$wikipedia:                #333;
+$stumbleupon:              #F74425;
+$foursquare:               #25A0CA;
+$call:                     #444;
+$ninetyninedesigns:        #F26739;
+$forrst:                   #5B9A68;
+$digg:                     #191919;
+$spotify:                  #81B71A;
+$reddit:                   #C6C6C6;
+$blogger:                  #FC4F08;
+$cc:                       #688527;
+$dribbble:                 #EA4C89;
+$evernote:                 #5BA525;
+$flickr:                   #FF0084;
+$google:                   #DD4B39;
+$instapaper:               #333;
+$klout:                    #FF5F52;
+$linkedin:                 #0E76A8;
+$vk:                       #2B587A;
+$rss:                      #EE802F;
+$skype:                    #00AFF0;
+$twitter:                  #00ACEE;
+$youtube:                  #C4302B;
+$vimeo:                    #86C9EF;
+$aim:                      #FCD20B;
+$yahoo:                    #720E9E;
+$email3:                   #6567A5;
+$macstore:                 #333333;
+$myspace:                  #666666;
+$podcast:                  #E4B21B;
+$cloudapp:                 #525557;
+$dropbox:                  #3D9AE8;
+$ebay:                     #89C507;
+$github:                   #171515;
+$googleplay:               #DD4B39;
+$itunes:                   #222;
+$plurk:                    #CF5A00;
+$pinboard:                 #0000E6;
+$soundcloud:               #FF7700;
+$tumblr:                   #34526F;
+$wordpress:                #1E8CBE;
+$yelp:                     #C41200;
+$intensedebate:            #009EE4;
+$eventbrite:               #F16924;
+$scribd:                   #666666;
+$stripe:                   #008CDD;
+$print:                    #111;
+$dwolla:                   #FF5C03;
+$statusnet:                #131A30;
+$acrobat:                  #D3222A;
+$drupal:                   #27537A;
+$buffer:                   #333333;
+$pocket:                   #EE4056;
+$bitbucket:                #0E4984;
+$stackoverflow:            #EF8236;
+$hackernews:               #FF6600;
+$xing:                     #126567;
+$instagram:                #3F729B;
+$quora:                    #A82400;
+$openid:                   #E16309;
+$steam:                    #111;
+$amazon:                   #E47911;
+$disqus:                   #E4E7EE;
+$plancast:                 #222;
+$appstore:                 #000;
+$pinterest:                #C8232C;
+$fivehundredpx:            #111;
+$si_text_color:            #FFF;

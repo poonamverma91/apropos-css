@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+//********************************************
+//				Angular material theme
+//********************************************
+@import '~bootswatch/dist/yeti/_variables.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootswatch/dist/yeti/_bootswatch.scss';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+//********************************************
+//									Others
+//********************************************
+@import './assets/sass/variables';
+@import './assets/sass/mixing';
+@import './assets/sass/animations';
+/*@import './assets/sass/global';*/
+@import 'assets/sass/apropos-fonts.css';
+
+// Initialize
+@import "./assets/sass/core/_mixins.scss";
+@import "./assets/sass/core/_variables.scss";
+
+//Shortcodes
+@import "./assets/sass/shortcodes/_buttons.scss";
+@import "./assets/sass/shortcodes/_modal.scss";
+@import "./assets/sass/shortcodes/_forms.scss";
+@import "./assets/sass/shortcodes/_new-forms.scss";
+
+//Templates
+@import "./assets/sass/templates/_rent-estimate.scss";
+@import "./assets/sass/templates/_property.scss";
+
+//DatePicker
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+@import '~css-star-rating/scss/star-rating';
+
+// Layout
+@import "./assets/sass/layout/_typography.scss";
+@import "./assets/sass/layout/_header.scss";
+@import "./assets/sass/layout/_navigation.scss";
+@import "./assets/sass/layout/_main.scss";

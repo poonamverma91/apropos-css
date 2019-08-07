@@ -1,0 +1,923 @@
+.container {
+  @media (min-width: 1200px){
+    max-width: 1218px;
+    padding: 0 20px;
+  }
+}
+/* Apropos Symbol */
+.apropos-symbol{
+  width: 180px;
+  height: 180px;
+  border-radius: 90px 90px 10px 90px;
+  overflow: hidden;
+  display: flex;
+  img{
+    width: 100%;
+  }
+  &.skyblue{
+    background-color: #00aff4;
+  }
+  &.pink{
+    background-color: #ffc3d4;
+  }
+  &.green{
+    background-color: #00a876;
+  }
+  &.red{
+    background-color: $apropos-red;
+  }
+}
+/****** Homepage **************/
+.content-area {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include mobile {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @include tablet {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+/****** About Us Features ******/
+.feature-sec {
+  text-align: center;
+  margin-bottom: 20px;
+
+  .apropos-symbol {
+    margin: 0 auto 30px;
+  }
+
+  h5 {
+    margin-bottom: 20px;
+    font-weight: $font-weight-bold;
+  }
+
+  p {
+    font-weight: $font-weight-light;
+  }
+}
+
+#carouselExampleIndicators{
+  .carousel-indicators {
+    padding: 30px 0;
+    position: relative;
+
+    li {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid $apropos-blue;
+
+      &.active {
+        background-color: $apropos-blue;
+      }
+    }
+  }
+}
+
+
+/******  About Apropos, Our Platform  *******/
+.bg-section {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 360px;
+  @include mobile {
+
+  }
+  @include tablet {
+
+  }
+
+  .video-section {
+    h1, p {
+      margin-bottom: 30px;
+    }
+
+    .featured-bg {
+      position: relative;
+      box-shadow: 0px 0px 50px 2px rgba(0, 0, 0, 0.1);
+
+      .features_video {
+        position: absolute;
+        width: 80px;
+        left: 50%;
+        top: 50%;
+        margin: -40px 0 0 -40px;
+      }
+    }
+  }
+
+  .platform-detail {
+    padding: 0 40px;
+    @include mobile {
+      padding: 0;
+    }
+    @include tablet {
+      padding: 0;
+    }
+
+    h1 {
+      @include mobile {
+        font-size: 28px;
+      }
+    }
+
+    .feature-icons {
+      display: flex;
+      align-items: center;
+      margin: 50px 0;
+      @include mobile {
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      i {
+        font-size: 35px;
+        margin-right: 60px;
+        color: rgba(255, 255, 255, 0.5);
+        @include mobile {
+          margin-right: 40px;
+        }
+
+        &:hover {
+          color: $apropos-white;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    img {
+      @include tablet {
+        height: 400px;
+        margin: 0 auto;
+      }
+    }
+
+    p {
+      color: $apropos-white;
+    }
+  }
+
+  .red-symbol {
+    background-color: $apropos-red;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50px 500px 500px 500px;
+    position: absolute;
+    top: 10%;
+    right: 40%;
+    z-index: -1;
+    transform: rotate(5deg);
+    @include mobile {
+      top: 27%;
+      right: 0;
+      transform: rotate(15deg);
+      left: -35%;
+    }
+    @include tablet {
+      width: 1200px;
+      height: 1200px;
+      border-radius: 50px 600px 600px 600px;
+      top: 24%;
+      right: 0;
+      transform: rotate(15deg);
+      left: -22%;
+    }
+  }
+
+  .bg-symbol {
+    width: 1200px;
+    height: 1200px;
+    border-radius: 600px 50px 600px 600px;
+    transform: rotate(-10deg);
+    position: absolute;
+    overflow: hidden;
+    top: 45%;
+    right: 18%;
+    @include mobile {
+      width: 650px;
+      height: 650px;
+      border-radius: 325px 50px 325px 325px;
+      transform: rotate(35deg);
+      left: -35%;
+      top: 72%;
+    }
+    @include tablet {
+      width: 800px;
+      height: 800px;
+      border-radius: 400px 50px 400px 400px;
+      transform: rotate(40deg);
+      left: -5%;
+      top: 74%;
+    }
+    @media (max-width: 320px) {
+      left: -50%;
+    }
+
+    &:before {
+      content: "";
+      background: url("../../images/public-website/rent-section-bg.jpg");
+      background-size: cover;
+      transform: rotate(10deg);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 22px;
+      top: -130px;
+      @include mobile {
+        transform: rotate(-35deg);
+        top: -3%;
+        left: 4%;
+      }
+      @include tablet {
+        transform: rotate(-40deg);
+        top: -3%;
+        left: 4%;
+      }
+    }
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/******  Rent Estimate Calculator  *******/
+.rent-estimate {
+  margin-top: -18%;
+  @include mobile {
+    margin-top: -85%;
+  }
+  @include tablet {
+    margin-top: -35%;
+  }
+
+  .cost-detail {
+    padding: 0 30px;
+    @include mobile {
+      padding: 0;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      @include mobile {
+        font-size: 26px;
+      }
+    }
+
+    p {
+      margin-bottom: 50px;
+    }
+  }
+
+  .calculate-area {
+    background-color: $apropos-white;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.1);
+    padding: 40px 50px;
+    border-radius: 5px;
+    text-align: center;
+    @include mobile {
+      padding: 20px 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.free-valuation {
+  @include mobile {
+    .col-lg-4, .col-lg-8 {
+      text-align: -webkit-center;
+    }
+  }
+  @include tablet {
+    .col-lg-4, .col-lg-8 {
+      text-align: -webkit-center;
+    }
+  }
+
+  .apropos-symbol {
+    @include mobile {
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.footer-detail {
+  background-color: $apropos-blue;
+  margin-top: 50px;
+
+  .footer-about {
+    @include mobile {
+      margin-top: 30px;
+    }
+    @include tablet {
+      margin-top: 30px;
+    }
+
+    h4 {
+      color: $apropos-white;
+      font-weight: $font-weight-semi-bold;
+      font-size: 20px;
+      @include mobile {
+        font-size: 18px;
+        line-height: 40px;
+      }
+    }
+
+    .footer-logo {
+      height: 60px;
+      margin-bottom: 30px;
+      @include mobile {
+        height: 40px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .footer-menu-list {
+    li {
+      a {
+        color: rgba(255, 255, 255, 0.7);
+        display: inline-block;
+        padding: 4px 0;
+        text-decoration: none;
+        font-weight: $font-weight-light;
+
+        &:hover {
+          color: $apropos-white;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+
+  .social-footer {
+    margin-top: 20px;
+
+    ul {
+      li {
+        a {
+          color: $apropos-white;
+          font-size: 30px;
+
+          &:hover {
+            color: $apropos-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    background-color: #161031;
+    padding: 15px 0;
+
+    .copyright-text {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .copyright-area {
+      display: flex;
+      justify-content: space-between;
+
+      ul {
+        text-align: right;
+        @include mobile {
+          text-align: left;
+          margin-bottom: 20px;
+        }
+        @include tablet {
+          text-align: left;
+          margin-bottom: 20px;
+        }
+
+        li {
+          margin-right: 20px;
+          @include mobile {
+            margin-right: 15px;
+            display: block;
+          }
+          @include tablet {
+            margin-right: 15px;
+            display: block;
+          }
+
+          &:last-child {
+            margin: 0;
+          }
+
+          a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+/****************** Book Valuation **************************/
+
+.valuation-area {
+  border-radius: 5px;
+  border: 1px solid $apropos-mid-grey;
+  border-top: 5px solid $apropos-blue;
+  padding: 20px;
+  font-family: $roboto-font;
+
+  h4 {
+    font-family: $roboto-font;
+  }
+
+  .carousel-control-next, .carousel-control-prev {
+    width: auto;
+    background-color: $apropos-white;
+
+    i {
+      font-size: 30px;
+      color: $apropos-blue;
+    }
+  }
+
+  .slot-card {
+    padding: 20px 0;
+    margin: 0 8px;
+    border: 2px solid $apropos-blue;
+    color: $apropos-blue;
+    background-color: $apropos-white;
+    border-radius: 3px;
+    text-align: center;
+    display: block;
+
+    &:hover, &.active {
+      background-color: $apropos-blue;
+      color: $apropos-white;
+    }
+
+    .date {
+      font-size: $font-size-h3;
+    }
+  }
+
+  .time-slot {
+    font-size: $font-size-h3;
+    text-align: center;
+    border: 2px solid $apropos-white;
+    border-radius: 20px;
+    margin: 5px 0;
+    display: block;
+    padding: 0 12px;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover, &.active {
+      border: 2px solid $apropos-blue;
+    }
+
+    &:disabled {
+      &:hover {
+        border-color: $apropos-white;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .date-summary {
+    font-family: $roboto-font;
+    line-height: 40px;
+  }
+
+  .profile-pic {
+    margin: 30px 0 20px;
+
+    img {
+      width: 20%;
+    }
+  }
+}
+
+/************ Search Property Filter *************/
+.search-container {
+  padding: 20px 0;
+
+  p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .form-control {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .bedrooms {
+    input {
+      width: 45px;
+      padding: 0;
+      text-align: center;
+    }
+
+    .btn-bedroom {
+      font-size: 25px;
+      padding: 0;
+      width: 45px;
+      justify-content: center;
+      border: 1px solid $apropos-mid-grey;
+      font-weight: $font-weight-light;
+      &:hover, &:focus{
+        color: $apropos-blue;
+      }
+    }
+  }
+
+  .prop-type {
+    input[type=checkbox] {
+      &:checked + label {
+        background-color: $apropos-blue;
+        color: $apropos-white;
+      }
+      + label {
+        font-size: 9px;
+        padding: 5px 10px;
+        margin-right: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    .btn-outline-apropos-blue {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 2.4px;
+      font-family: $roboto-font;
+      border-color: $apropos-grey;
+      color: $apropos-grey;
+      background-color: $apropos-white;
+      margin: 5px 0;
+      box-shadow: none;
+    }
+  }
+  .update-button{
+    position: absolute;
+    left: 40%;
+    bottom: -18px;
+    i {
+      margin-left: 5px;
+    }
+    .btn-apropos-red{
+      &:hover{
+        background-color: $apropos-white;
+      }
+    }
+  }
+}
+
+/************* Save Search Alert Dropdown ***************/
+.popover{
+  .arrow{
+    &:before,  &:after{
+      border-bottom-color: $apropos-light-grey;
+    }
+  }
+  .popover-body{
+    border-radius:5px;
+    padding: 0;
+    .popover-header{
+      &:before{
+        border-bottom: $apropos-light-grey;
+      }
+      background-color: $apropos-light-grey;
+      color: $apropos-blue;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 15px;
+      border-radius:5px 5px 0 0;
+    }
+    .popover-footer{
+      text-align: center;
+      border-radius: 0 0 5px 5px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+/*********** Property Search List  ***************/
+.map-container{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 20px;
+  #map {
+    height: 700px;
+  }
+}
+
+.property-list-area {
+  border: 2px solid $apropos-light-grey;
+  position: relative;
+  border-radius: 3px;
+  font-size: 16px;
+  &:hover{
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+  }
+  &.box-shadow{
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .valuation-placeholder {
+    background-color: $apropos-light-grey;
+    display: flex;
+    align-items: center;
+    border-radius: 3px 0 0 3px;
+    padding: 0 30px;
+    min-height: 175px;
+    justify-content: center;
+
+    i {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    span {
+      line-height: 18px;
+    }
+    .carousel-item{
+      height: 175px;
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+    .carousel-indicators {
+      margin-bottom: 5px;
+      li {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 1px solid $apropos-white;
+        background-color: transparent;
+        cursor: pointer;
+        margin: 0 5px;
+        box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+        &.active {
+          background-color: $apropos-white;
+        }
+      }
+    }
+    .carousel-arrow{
+      background-color: rgba(255,255,255,0.7);
+      border-radius: 3px;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      top: 44%;
+      margin: 0 10px;
+      i{
+        font-size: 12px;
+        color: $apropos-blue;
+        margin: 0;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .prop-detail {
+    padding: 15px;
+    cursor: pointer;
+    height: 100%;
+    .address-ellipse {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    small {
+      font-size: 12px;
+    }
+    h5 {
+      font-family: $roboto-font;
+      font-weight: $font-weight-regular;
+      margin-bottom: 5px;
+    }
+    h4 {
+      line-height: 20px;
+    }
+  }
+}
+
+.progress{
+  border-radius: 10px;
+  height: 5px;
+  .progress-bar{
+    border-radius: 10px;
+  }
+}
+.rent-pointer{
+  background-color: $apropos-white;
+  color: $apropos-blue;
+  padding: 8px;
+  margin-left: -8px;
+  margin-top: -8px;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  &:after{
+    content: '';
+    width:0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid $apropos-white;
+    position: absolute;
+    bottom: -8px;
+    right: 40%;
+  }
+  &:hover,&.active{
+    background-color: $apropos-blue;
+    color: $apropos-white;
+    z-index: 9;
+    &:after{
+      border-top: 8px solid $apropos-blue;
+    }
+  }
+}
+
+/************ Property Detail ***************/
+
+.tab-nav{
+  .nav{
+    border-bottom: 1px solid $apropos-light-grey;
+    .nav-item{
+      padding: 0 15px;
+      &:first-child{
+        padding-left: 0;
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+      .nav-link{
+        padding: 8px 0;
+        position: relative;
+        color: $apropos-mid-grey;
+        font-weight: $font-weight-medium;
+        &:hover, &.active{
+          color: $apropos-blue;
+        }
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          height: 4px;
+          border-radius: 2px;
+          width: 100%;
+          background-color: $apropos-blue;
+          transform-origin: right top;
+          transform: scale(0, 1);
+          transition: color 0.1s, transform 0.2s ease-out;
+        }
+        &:hover::before, &.active:before {
+          transform-origin: left top;
+          transform: scale(1, 1);
+        }
+      }
+    }
+  }
+}
+.property-banner{
+  height:450px;
+  .tab-pane{
+    overflow: hidden;
+  }
+  img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+.save-prop{
+  color: $apropos-mid-grey;
+  display: flex;
+  align-items: center;
+  font-family: $montserrat-font;
+  font-size: 12px;
+  span{
+    font-size: 28px;
+    margin-right: 10px;
+    cursor: pointer;
+    line-height: normal;
+  }
+}
+.property-detail{
+  h3{
+    font-weight: $font-weight-regular;
+    margin-bottom: 15px;
+  }
+  p{
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  small{
+    font-size: 12px;
+  }
+  h4{
+    font-family: $roboto-font;
+    font-weight: $font-weight-medium;
+    margin-bottom: 15px;
+  }
+  .available{
+    line-height: normal;
+  }
+  .feature-list{
+    margin-left: 20px;
+    li{
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.left-arrow, .right-arrow{
+  position: absolute;
+  top: 50%;
+  width:30px;
+  height: 30px;
+  background-color: rgba(255,255,255,0.5);
+  color: $apropos-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover{
+    background-color: $apropos-white;
+  }
+  i{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.left-arrow{
+  left: -80px;
+}
+.right-arrow{
+  right: -80px;
+}
+.image-wrapper{
+  height: 150px;
+}
+
+.favorite{
+  font-size: 22px;
+  color: $apropos-mid-grey;
+  padding-top: 3px;
+  margin-left: 20px;
+  &:after{
+    content: "\e00b";
+    font-family: 'apropos';
+  }
+  &:hover, &:focus, &.active{
+    &:after{
+      content: "\e00a";
+      font-family: 'apropos';
+      color: $apropos-red;
+    }
+  }
+}

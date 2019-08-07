@@ -1,0 +1,434 @@
+/*-----------------------------------------------------------------------------------
+	Navigation
+-----------------------------------------------------------------------------------*/
+.fixed-sidebar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  height: 100%;
+  @include mobile {
+    position: fixed;
+  }
+}
+
+.sidebar-container {
+  height: 100vh;
+  background-color: $apropos-white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-family: $montserrat-font;
+  transition: all .75s ease;
+  z-index: 999;
+  @include box-shadow(0 0 7px -1px rgba(0, 0, 0, 0.5));
+  @include mobile {
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 1023px) {
+    padding-top: 80px;
+  }
+
+  .logo {
+    padding: 20px 40px;
+    margin: 0;
+    transition: all 400ms ease;
+
+    .full-logo {
+      height: 34px;
+    }
+  }
+
+  .nav-panel {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile-pic {
+    text-align: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 20px 0;
+    }
+
+    .profile-detail {
+      margin-bottom: 30px;
+
+      h4 {
+        margin: 0 auto 5px;
+        font-weight: $font-weight-regular;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        max-width: 180px;
+      }
+
+      p {
+        font-size: 13px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        max-width: 180px;
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  .sidebar {
+    display: block;
+    width: 100%;
+    list-style: none;
+    margin-bottom: 0;
+
+    li {
+      a {
+        color: $apropos-blue;
+        position: relative;
+        padding: 10px 15px;
+        text-align: center;
+        font-size: $font-size-small;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: all 400ms ease;
+        font-weight: $font-weight-regular;
+        font-family: $montserrat-font;
+
+        i {
+          font-size: 20px;
+          margin: 0 20px;
+          width: 30px;
+          text-align: center;
+        }
+
+        .profile-pic {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          margin: 0 auto;
+        }
+
+        span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        &:hover {
+          background-color: $apropos-light-grey;
+        }
+
+        &.active {
+          background-color: $apropos-light-grey;
+        }
+
+        &:target {
+          background-color: $apropos-white;
+          color: $apropos-blue;
+        }
+      }
+
+      .sub-nav {
+        width: auto;
+        margin-left: 45px;
+
+        a {
+          border: none;
+
+          &:hover, &.active {
+            background-color: transparent;
+            color: $apropos-blue;
+            font-weight: $font-weight-medium;
+
+            span {
+              text-decoration: underline !important;
+            }
+          }
+
+          &.active {
+            font-weight: $font-weight-medium;
+            border: none;
+          }
+        }
+      }
+
+      .notification {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .badge-red {
+          background-color: $apropos-red;
+          border-radius: 20px;
+          position: absolute;
+          top: -10px;
+          right: 10px;
+          color: $apropos-white;
+          font-family: $roboto-font;
+          min-width: 18px;
+          height: 18px;
+          line-height: 18px;
+          padding: 0;
+          display: none;
+        }
+      }
+
+      .notification-badge {
+        background-color: $apropos-red;
+        margin-left: 20px;
+        border-radius: 10px;
+        color: $apropos-white;
+        padding: 2px 5px;
+        width: 32px;
+        font-weight: 600;
+        line-height: 13px;
+      }
+
+      span {
+        &.active > a {
+          background-color: $apropos-light-grey;
+        }
+      }
+    }
+  }
+}
+
+input[type=checkbox] ~ div {
+  .collapse-menu {
+    cursor: pointer;
+    color: $apropos-blue;
+    font-size: 34px;
+    transition: all 400ms ease;
+    font-weight: $font-weight-medium;
+    line-height: normal;
+
+    .collapse-in {
+      display: none;
+      font-size: 12px;
+      @media (max-width: 1023px) {
+        display: block;
+        font-size: 26px;
+      }
+    }
+
+    .collapse-out {
+      display: block;
+      font-size: 12px;
+      @media (max-width: 1023px) {
+        display: none;
+        font-size: 18px;
+      }
+    }
+  }
+  .logo {
+    transition: all 0.7s;
+
+    .logo-symbol {
+      display: none;
+      @media (max-width: 1023px) {
+        display: none;
+        font-size: 35px;
+      }
+    }
+
+    .full-logo {
+      display: block;
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+  }
+  .sidebar-container {
+    @media (max-width: 1023px) {
+      display: none;
+      transition: all .75s ease;
+    }
+  }
+}
+
+input[type=checkbox]:checked ~ div {
+  .collapse-menu {
+    width: auto;
+    transition: all 400ms ease;
+
+    .collapse-in {
+      display: block;
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    .collapse-out {
+      display: none;
+      @media (max-width: 1023px) {
+        display: block;
+      }
+    }
+  }
+  .logo {
+    width: auto;
+    transition: all 400ms ease;
+    padding: 20px 17px;
+    opacity: 1;
+    @media (max-width: 1023px) {
+      display: none;
+    }
+
+    .logo-symbol {
+      display: block;
+      font-size: 40px;
+      color: $apropos-red;
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    .full-logo {
+      display: none;
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+  }
+  .sidebar-container {
+    display: block;
+    transition: all .75s ease;
+    @media (max-width: 1023px) {
+      transition: all .75s ease;
+      position: fixed;
+      overflow-x: scroll;
+      z-index: 9;
+    }
+
+    li {
+      &.head-sidebar {
+        @media (max-width: 1023px) {
+          a {
+            font-weight: $font-weight-medium;
+            padding: 10px 15px;
+            justify-content: center;
+          }
+        }
+      }
+
+      &.head {
+        text-align: center;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        @media (max-width: 1023px) {
+          justify-content: flex-start;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+        @include mobile {
+          padding-left: 100px;
+        }
+
+        i {
+          margin: 0 auto;
+          @media (max-width: 1023px) {
+            margin: 0 20px 0 0;
+          }
+        }
+
+        span {
+          display: none;
+          @media (max-width: 1023px) {
+            display: block;
+          }
+        }
+      }
+
+      .profile-pic {
+        margin: 0 auto;
+        display: block;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-bottom: 20px;
+          @media (max-width: 1023px) {
+            width: 100px;
+            height: 100px;
+          }
+        }
+
+        .profile-detail {
+          display: none;
+          @media (max-width: 1023px) {
+            display: block;
+          }
+        }
+      }
+
+      .badge-red {
+        display: block;
+        right: -3px;
+        @media (max-width: 1023px) {
+          right: 10px;
+          display: none;
+        }
+
+        &:empty {
+          display: none;
+        }
+      }
+
+      .notification-badge {
+        display: none;
+        @media (max-width: 1023px) {
+          display: block;
+        }
+      }
+
+      .sub-nav {
+        margin-left: 0;
+        @media (max-width: 1023px) {
+          margin-left: 45px !important;
+        }
+      }
+    }
+  }
+}
+
+.sidebar-collapse {
+  position: absolute;
+  right: -20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  @include mobile {
+    display: none !important;
+  }
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.header-collapse {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 9999;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include desktop {
+    display: none !important;
+  }
+}
