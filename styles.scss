@@ -1,14 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 //********************************************
-//				Angular material theme
-//********************************************
-@import '~bootswatch/dist/yeti/_variables.scss';
-@import '~bootstrap/scss/bootstrap.scss';
-@import '~bootswatch/dist/yeti/_bootswatch.scss';
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
-
-//********************************************
 //									Others
 //********************************************
 @import './sass/variables';
@@ -30,10 +22,6 @@
 //Templates
 @import "./sass/templates/_rent-estimate.scss";
 @import "./sass/templates/_property.scss";
-
-//DatePicker
-@import "~ng-pick-datetime/assets/style/picker.min.css";
-@import '~css-star-rating/scss/star-rating';
 
 // Layout
 @import "./sass/layout/_typography.scss";
